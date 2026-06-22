@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kasir Coffee 11.22</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Splash Screen -->
+<div id="splash">
+    <div class="welcome-box">
+        <h1>WELCOME TO</h1>
+        <h2>KASIR COFFEE 11.22</h2>
+        <p>SELAMAT BEKERJA</p>
+    </div>
+</div>
+
+<div class="container">
+
+    <h1>☕ KASIR COFFEE 11.22</h1>
+
+    <!-- ABSENSI -->
+    <div class="absensi">
+
+        <h2>Daftar Hadir Karyawan</h2>
+
+        <input type="text" id="nama" placeholder="Nama Karyawan">
+
+        <select id="shift">
+            <option>Pilih Shift</option>
+            <option>Shift Pagi</option>
+            <option>Shift Siang</option>
+            <option>Shift Sore</option>
+            <option>Shift Malam</option>
+        </select>
+
+        <button onclick="absen()">
+    Absen Masuk
+</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Shift</th>
+                    <th>Jam Masuk</th>
+                </tr>
+            </thead>
+
+            <tbody id="dataAbsen"></tbody>
+        </table>
+
+    </div>
+
+    <!-- MENU -->
+    <div class="menu">
+
+        <div class="card">
+            <h3>Espresso</h3>
+            <p>Rp 10.000</p>
+            <button onclick="tambahItem('Espresso',10000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Americano</h3>
+            <p>Rp 12.000</p>
+            <button onclick="tambahItem('Americano',12000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Long Black</h3>
+            <p>Rp 12.000</p>
+            <button onclick="tambahItem('Long Black',12000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Berry Americano</h3>
+            <p>Rp 17.000</p>
+            <button onclick="tambahItem('Berry Americano',17000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Americano Orange</h3>
+            <p>Rp 17.000</p>
+            <button onclick="tambahItem('Americano Orange',17000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Americano Apple</h3>
+            <p>Rp 17.000</p>
+            <button onclick="tambahItem('Americano Apple',17000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>V60</h3>
+            <p>Rp 25.000</p>
+            <button onclick="tambahItem('V60',25000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Japanese</h3>
+            <p>Rp 25.000</p>
+            <button onclick="tambahItem('Japanese',25000)">
+                Tambah
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Matcha Vanilla</h3>
+            <p>Rp 17.000</p>
+            <button onclick="tambahItem('Matcha Vanilla',17000)">
+                Tambah
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Matcha Latte</h3>
+            <p>Rp 16.000</p>
+            <button onclick="tambahItem('Matcha Latte',16000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Pure Matcha</h3>
+            <p>Rp 15.000</p>
+            <button onclick="tambahItem('Pure Matcha',15000)">
+                Tambah
+            </button>
+        </div>
+
+
+        <div class="card">
+            <h3>Thai Tea</h3>
+            <p>Rp 15.000</p>
+            <button onclick="tambahItem('Thai Tea',15000)">
+                Tambah
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Milshake Vanilla</h3>
+            <p>Rp 15.000</p>
+            <button onclick="tambahItem('Milshake Vanilla',15000)">
+                Tambah
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Kopi Susu</h3>
+            <p>Rp 16.000</p>
+            <button onclick="tambahItem('Kopi susu',16000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Arel Latte</h3>
+            <p>Rp 16.000</p>
+            <button onclick="tambahItem('Aren Latte',16000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Salted Caramel Latte</h3>
+            <p>Rp 16.000</p>
+            <button onclick="tambahItem('Salted Caramel Latte',16000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Vanilla Latte</h3>
+            <p>Rp 16.000</p>
+            <button onclick="tambahItem('Vanilla Latte',16000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Butterscotch Latte</h3>
+            <p>Rp 17.000</p>
+            <button onclick="tambahItem('Butterscotch Latte',17000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Hazelnut Latte</h3>
+            <p>Rp 18.000</p>
+            <button onclick="tambahItem('Hazelnut Latte',18000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Kentang Goreng</h3>
+            <p>Rp 10.000</p>
+            <button onclick="tambahItem('Kentang Goreng',10000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Mix Platter</h3>
+            <p>Rp 17.000</p>
+            <button onclick="tambahItem('Mix Platter',17000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Mie Rebus/Goreng Biasa</h3>
+            <p>Rp 8.000</p>
+            <button onclick="tambahItem('Mie Rebus/Goreng',8000)">
+                Tambah
+            </button>
+        </div>
+
+            <div class="card">
+            <h3>Mie Rebus/Goreng + Telor</h3>
+            <p>Rp 12.000</p>
+            <button onclick="tambahItem('Mie Rebus/Boreng + Telor',12000)">
+                Tambah
+            </button>
+        </div>
+
+
+            <div class="card">
+            <h3>Cokies</h3>
+            <p>Rp 15.000</p>
+            <button onclick="tambahItem('Cookies',15000)">
+                Tambah
+            </button>
+        </div>
+
+
+    </div>
+
+    <!-- KASIR -->
+    <div class="kasir">
+
+        <h2>Pesanan</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Menu</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+
+            <tbody id="daftarPesanan"></tbody>
+        </table>
+
+        <h3>Total : Rp <span id="total">0</span></h3>
+
+<select id="metodePembayaran" onchange="cekMetode()">
+    <option value="Tunai">Tunai</option>
+    <option value="QRIS">QRIS</option>
+</select>
+
+<div id="qrisBox" style="display:none;text-align:center;margin-top:15px;">
+    <h3>Scan QRIS</h3>
+
+    <img
+        src="qris.jpg.jpeg"
+        alt="QRIS"
+        style="width:250px;max-width:100%;border-radius:10px;"
+    >
+
+    <p>Silakan scan QRIS untuk pembayaran</p>
+</div>
+
+<input
+type="number"
+id="bayar"
+placeholder="Masukkan uang bayar">
+
+<h3>
+Kembalian : Rp
+<span id="kembalian">0</span>
+</h3>
+
+    <h2>Total Pemasukan Hari Ini</h2>
+<h1 style="color:green">
+Rp <span id="totalPemasukan">0</span>
+</h1>
+
+<button onclick="prosesPembayaran()">
+    Bayar
+</button>
+<button onclick="resetPemasukan()">
+    Reset Pemasukan
+</button>
+
+<hr>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
